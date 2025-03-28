@@ -1,0 +1,49 @@
+.bgAnimation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background: #1d1d1d; /* Changed from #1d1d1d to white */
+    filter: saturate(2);
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .colorBox {
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d; /* Changed from #1d1d1d to white */
+    border: 1px solid rgba(0,0,0,0.05); /* Added subtle border for better visibility on white */
+  }
+  
+  .colorBox:hover {
+    background: white; /* Changed from #00bfff to #16176F */
+    transition-duration: 0s;
+  }
+  
+  .backgroundAnim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: white; /* Changed from #00bfff to #16176F */
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+  }
+  
+  @keyframes animBack {
+    0% {
+      top: -60px;
+    }
+    100% {
+      top: 120%;
+    }
+  }
