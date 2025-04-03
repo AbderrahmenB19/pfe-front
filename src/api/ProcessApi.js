@@ -1,9 +1,9 @@
-import axios from 'axios';
+import api from './index';
 
 const API_BASE_URL = 'http://your-api-url.com/api';
 
 export default {
-  getProcesses: () => axios.get(`${API_BASE_URL}/processes`),
+  getProcesses: () => api.get(`${API_BASE_URL}/client/processes`),
   cancelProcess: (processInstanceId) => 
-    axios.delete(`${API_BASE_URL}/processes/${processInstanceId}`),
+    api.patch(`${API_BASE_URL}/client/processes/cancel-request/${processInstanceId}`),
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Power } from 'react-bootstrap-icons';
+import { Icon } from 'semantic-ui-react';
 
 const AdminLayout = () => {
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ const AdminLayout = () => {
               onClick={handleLogout}
               className="logout-btn"
             >
-              <Power className="me-1" /> Logout
+              <Icon name='power off'/> Logout
             </Button>
           </Navbar.Collapse>
         </Container>

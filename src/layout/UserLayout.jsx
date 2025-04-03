@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Navbar, Nav, Button } from 'react-bootstrap';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { Power } from 'react-bootstrap-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const UserLayout = () => {
   const navigate = useNavigate();
@@ -41,7 +42,7 @@ const UserLayout = () => {
                 onClick={handleLogout}
                 className="logout-btn"
               >
-                <Power className="me-1" /> Logout
+                <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" /> Logout
               </Button>
             </div>
           </Navbar.Collapse>

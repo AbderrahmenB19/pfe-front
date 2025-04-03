@@ -35,7 +35,7 @@ const ApprovedRequest = ({ request }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {value.map((item, itemIndex) =>
               typeof item === 'object' ? (
                 <div key={itemIndex}>
@@ -61,7 +61,7 @@ const ApprovedRequest = ({ request }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {Object.entries(value).map(([nestedKey, nestedValue], nestedIndex) => (
               <div key={nestedKey}>
                 {renderField(nestedKey, nestedValue, `${index}-${nestedIndex}`)}

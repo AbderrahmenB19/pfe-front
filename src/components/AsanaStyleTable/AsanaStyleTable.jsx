@@ -126,7 +126,7 @@ const AsanaStyleTable = ({ processes, onCancelRequest, loading }) => {
                 ? theme.palette.grey[800] 
                 : theme.palette.grey[100]
             }}>
-              <StyledTableCell sx={{ width: '40%', fontWeight: 600 }}>Task Name</StyledTableCell>
+              <StyledTableCell sx={{ width: '40%', fontWeight: 600 }}>Request Name</StyledTableCell>
               <StyledTableCell sx={{ fontWeight: 600 }}>Assignee</StyledTableCell>
               <StyledTableCell sx={{ fontWeight: 600 }}>Due Date</StyledTableCell>
               <StyledTableCell sx={{ fontWeight: 600 }}>Status</StyledTableCell>

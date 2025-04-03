@@ -36,7 +36,7 @@ const RejectedRequest = ({ request }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {value.map((item, itemIndex) =>
               typeof item === 'object' ? (
                 renderField(`${key} - ${itemIndex + 1}`, item, itemIndex)
@@ -60,7 +60,7 @@ const RejectedRequest = ({ request }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {Object.entries(value).map(([nestedKey, nestedValue], nestedIndex) => (
               <div key={nestedKey}>
                 {renderField(nestedKey, nestedValue, nestedIndex)}

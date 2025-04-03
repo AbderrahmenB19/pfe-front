@@ -59,7 +59,7 @@ const PendingRequest = ({ request, onApprove, onReject }) => {
   const renderField = (key, value, index) => {
     if (Array.isArray(value)) {
       return (
-        <Accordion key={`${key}-${index}`} styled>
+        <Accordion key={`${key}-${index}`} >
           <Accordion.Title
             active={activeAccordions.includes(index)}
             index={index}
@@ -68,7 +68,7 @@ const PendingRequest = ({ request, onApprove, onReject }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {value.map((item, itemIndex) =>
               typeof item === 'object' ? (
                 renderField(`${key} - ${itemIndex + 1}`, item, itemIndex)
@@ -92,7 +92,7 @@ const PendingRequest = ({ request, onApprove, onReject }) => {
             <Icon name="dropdown" />
             {key}
           </Accordion.Title>
-          <Accordion.Content active={activeAccordions.includes(index)}>
+          <Accordion.Content active={activeAccordions.includes(index)} style={{backgroundColor: 'white'}}>
             {Object.entries(value).map(([nestedKey, nestedValue], nestedIndex) => (
               <div key={nestedKey}>
                 {renderField(nestedKey, nestedValue, nestedIndex)}
@@ -118,7 +118,7 @@ const PendingRequest = ({ request, onApprove, onReject }) => {
       </Header>
 
       <Card fluid>
-        <Card.Content>
+        <Card.Content >
           {Object.entries(request.formData).map(([key, value], index) => (
             <div key={key}>
               {renderField(key, value, index)}
