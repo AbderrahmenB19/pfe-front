@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Col, Container, Row, Button, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { FormBuilder, Form } from '@formio/react';
-import 'formiojs/dist/formio.full.min.css'; // Import Form.io default styles
+import 'formiojs/dist/formio.full.min.css'; 
 import { FaTrash, FaSave, FaEye, FaTimes } from 'react-icons/fa';
 
 const styles = {

@@ -180,6 +180,7 @@ const FormAndJsonView = ({
                   color={formSchema ? "primary" : "success"}
                   startIcon={<EditIcon />}
                   size="small"
+                  hidden={!jsonData}
                 >
                   {formSchema ? "Edit Form" : "Create Form"}
                 </ActionButton>
